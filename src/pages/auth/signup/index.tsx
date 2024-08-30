@@ -1,3 +1,5 @@
+'use client'
+
 import styles from "../../../styles/SignUp/index.module.css"
 
 import SuccessImage from "../../../../public/images/success.png"

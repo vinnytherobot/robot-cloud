@@ -1,3 +1,5 @@
+'use client'
+
 import styles from "../../../styles/SignIn/index.module.css"
 
 import SignInForm from "@/components/SignInForm/index"
