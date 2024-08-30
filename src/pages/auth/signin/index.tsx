@@ -9,6 +9,7 @@ import { useRouter } from "next/router"
 import { ChangeEvent, FormEvent, useState } from "react"
 import axios from "axios"
 import { setCookie } from "nookies"
+import { headers } from "next/headers"
 
 
 type UserDataType = {
@@ -18,6 +19,8 @@ type UserDataType = {
 }
 
 export default function SignIn(){
+    const headersList = headers();
+
     const [userData, setUserData] = useState<UserDataType>(Object);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
