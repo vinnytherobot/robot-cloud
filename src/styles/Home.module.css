@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.container .welcomeInformation {
+    display: block;
+    margin-top: 4rem;
+}
+
+.container .welcomeInformation h1 {
+    color: #B8B3B3;
+    font-size: 3.3rem;
+    margin-bottom: 3rem;
+}
+
+.container .welcomeInformation p {
+    color: #122e28;
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    margin-bottom: 5rem;
+    text-align: justify;
+}
+
+.container .welcomeInformation a {
+    color: #FFF;
+    background-color: #6f61c1;
+    width: 3rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    border-radius: 0.2em;
+    user-select: none;
+}
+
+.container img {
+    margin-top: 2rem;
+    width: 45rem;
+    height: 30rem;
+}
+
+@media (max-width: 1080px){
+    .container {
+        padding: 0 2.5rem;
+        display: block;
+    }
+
+    .container .welcomeInformation {
+        margin-top: 6rem;
+    }
+
+    .container img {
+        width: 35rem;
+        height: auto;
+        display: flex;
+        margin: 8rem auto;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container .welcomeInformation h1 {
+        font-size: 2.5rem;
+    }
+
+    .container .welcomeInformation p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .welcomeInformation h1 {
+        font-size: 2rem;
+    }
+
+    .container .welcomeInformation p {
+        font-size: 0.9rem;
+    }
+
+    .container .welcomeInformation a {
+        font-size: 1.4rem;
+        padding: 0.8rem 2.5rem;
+    }
+
+    .container img {
+        width: 100%;
+    }
+}

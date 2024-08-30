@@ -1,0 +1,17 @@
+.uploadButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    background-color: #6f61c1;
+    color: #FFF;
+    font-weight: 700;
+    border-radius: 0.2rem;
+    padding: 0 2rem;
+    cursor: pointer;    
+}
+
+.fileInput {
+    width: 0rem;
+    opacity: 0;
+}

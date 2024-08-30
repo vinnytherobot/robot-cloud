@@ -1,0 +1,104 @@
+.containerForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap; 
+}
+
+.containerForm .form {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    gap: 3rem;
+}
+
+.containerForm .form h1 {
+    color: #B8B3B3;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.containerForm .form .input {
+    font-size: 1rem;
+    margin: 0 auto;
+    color: darkgray;
+    font-weight: 500;
+    width: 25rem;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    border-radius: 0.2rem;
+    padding: 0.5rem 2rem;
+}
+
+.containerForm .form .input::placeholder {
+    color: #B8B3B3;
+}
+
+.containerForm .form .button {
+    color: #FFF;
+    border-radius: 0.2rem;
+    background-color: #6f61c1;
+    width: 25rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.8rem 3rem;
+    margin: 3rem auto;
+    cursor: pointer;
+}
+
+.containerForm img {
+    width: 60%;
+    height: auto;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .containerForm {
+        flex-direction: row;
+        justify-content: center;
+        padding: 1.5rem;
+    }
+
+    .containerForm .form {
+        width: 50%;
+    }
+
+    .containerForm img {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .containerForm {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .containerForm .form {
+        width: 100%;
+        gap: 1.9rem;
+    }
+
+    .containerForm .form .input,
+    .containerForm .form .button {
+        width: 90%;
+    }
+
+    .containerForm img {
+        display: none; 
+    }
+}
+
+@media (max-width: 480px) {
+    .containerForm .form h1 {
+        font-size: 1.5rem;
+    }
+
+    .containerForm .form .input,
+    .containerForm .form .button {
+        width: 100%;
+        font-size: 1rem;
+    }
+}

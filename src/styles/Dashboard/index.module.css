@@ -1,0 +1,13 @@
+.container label {
+    display: flex;
+    padding: 1.5rem 4rem;
+    width: 20rem;
+    margin: 3rem auto;
+}
+
+
+@media (min-width: 720px){
+    .container label {
+        display: none;
+    }
+}
