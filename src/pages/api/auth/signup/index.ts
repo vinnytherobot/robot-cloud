@@ -7,7 +7,7 @@ import bcrypt from "bcryptjs"
 
 const prisma = new PrismaClient();
 
-export default async function handler(request: NextApiRequest, response: NextApiResponse){
+export default async function POST(request: NextApiRequest, response: NextApiResponse){
     const createUserSchema = z.object({
         name: z.string(),
         email: z.string().email(),
