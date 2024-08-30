@@ -5,6 +5,8 @@ import bcrypt from "bcryptjs";
 
 const prisma = new PrismaClient();
 
+export const dynamic = 'force-static'
+
 export default async function POST(request: NextApiRequest, response: NextApiResponse) {
     const signInSchema = z.object({
         email: z.string().email(),
