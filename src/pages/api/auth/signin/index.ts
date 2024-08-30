@@ -6,10 +6,6 @@ import bcrypt from "bcryptjs";
 const prisma = new PrismaClient();
 
 export default async function handler(request: NextApiRequest, response: NextApiResponse) {
-    if(request.method !== "POST"){
-        return response.status(405).json({ error: "Method not allowed" });
-    }
-
     const signInSchema = z.object({
         email: z.string().email(),
         password: z.string(),
