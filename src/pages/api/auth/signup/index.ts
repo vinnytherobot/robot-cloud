@@ -1,12 +1,13 @@
-import { PrismaClient } from "@prisma/client";
-import { NextApiRequest, NextApiResponse } from "next";
-import z from "zod";
-import bcrypt from "bcryptjs";
+import { PrismaClient } from "@prisma/client"
+import { NextApiRequest, NextApiResponse } from "next"
+
+import z from "zod"
+import bcrypt from "bcryptjs"
 
 const prisma = new PrismaClient();
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    if (req.method === "POST") {
+    if(req.method === "POST"){
         const createUserSchema = z.object({
             name: z.string(),
             email: z.string().email(),
@@ -27,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             });
 
             res.status(201).json({ message: "User created successfully", id: newUser.id });
-        } catch (error) {
+        } catch(error){
             console.error("Error creating user:", error);
             res.status(400).json({ error: "Failed to create user" });
         }

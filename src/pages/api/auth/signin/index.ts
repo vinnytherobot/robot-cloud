@@ -1,13 +1,14 @@
-import { PrismaClient } from "@prisma/client";
-import { NextApiRequest, NextApiResponse } from "next";
-import z from "zod";
-import bcrypt from "bcryptjs";
+import { PrismaClient } from "@prisma/client"
+import { NextApiRequest, NextApiResponse } from "next"
+
+import z from "zod"
+import bcrypt from "bcryptjs"
 
 const prisma = new PrismaClient();
 
 export const dynamic = 'force-static'
 
-export default async function POST(request: NextApiRequest, response: NextApiResponse) {
+export default async function handler(request: NextApiRequest, response: NextApiResponse) {
     const signInSchema = z.object({
         email: z.string().email(),
         password: z.string(),
